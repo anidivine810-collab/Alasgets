@@ -225,7 +225,9 @@ const Navbar = () => {
             <p className="py-3 px-4 text-red-500 font-medium">Super Deals</p>
             <p className="py-3 px-4 hover:bg-gray-100 rounded-lg">AlasDget Businesses</p>
             <p className="py-3 px-4 hover:bg-gray-100 rounded-lg">Iphones</p>
-            <p className="py-3 px-4 hover:bg-gray-100 rounded-lg">Androids</p>
+            <Link href={"/androids"}>
+              <p className="py-3 px-4 hover:bg-gray-100 rounded-lg">Androids</p>
+            </Link>
             <p className="py-3 px-4 hover:bg-gray-100 rounded-lg">Tablets</p>
             <p className="py-3 px-4 hover:bg-gray-100 rounded-lg">Smart Watches</p>
 
