@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import { useSession } from "next-auth/react"
 import { IoIosStar, IoIosStarHalf } from 'react-icons/io'
 import Skeleton from '@mui/material/Skeleton'
 import Stack from '@mui/material/Stack'
@@ -7,6 +8,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from '@/app/Config/firebaseConfig';
 
 const Preview = () => {
+  const { data: session } = useSession()
 
   const [loading, setLoading] = useState(true)
         const [processing, setProcessing] = useState(false)
@@ -20,6 +22,11 @@ const Preview = () => {
         }, [])
 
   const handleSubmit = async (value)=>{
+    if (!session?.user) {
+      alert("Please sign in to add to cart")
+      return
+    }
+    
     try {
       setProcessing(true)
       const cartDetails = {
@@ -160,3 +167,4 @@ const Preview = () => {
 }
 
 export default Preview
+

@@ -10,11 +10,11 @@ const Page = async () => {
   console.log(session);
   
   if (session) {
-    redirect("/profile/create");
+    redirect("/profile");
   }
 
   return (
-    <main className="min-h-dvh bg-gradient-to-br from-sky-50 to-blue-50 flex items-center justify-center p-4">
+    <main className="min-h-dvh bg-linear-to-br from-sky-50 to-blue-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-sky-200/70 p-6 md:p-10 space-y-8">
         
         <div className="text-center space-y-3">
