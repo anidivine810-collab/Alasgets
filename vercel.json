@@ -1,8 +1,0 @@
-{
-  "buildCommand": "next build",
-  "installCommand": "npm install",
-  "env": {
-    "NODE_OPTIONS": "--openssl-legacy-provider"
-  },
-  "nodejs": "20.x"
-}
